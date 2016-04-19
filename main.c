@@ -13,6 +13,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "tree.h"
 
 /*
@@ -30,24 +31,30 @@ int main(int argc, char** argv) {
     root->book = first;
     root->left = NULL;
     root->right = NULL;
-    switch(charkey)
+    while((charkey = getchar()) != 'z' && error != 1)
     {
-        case 'd':
-            loadData(&first);
-             if(insertElement(root,&first))
-             {
-                error = 1;
-                printf("blad");
-             }
-            break;
-        case 'w':
-            writeTree(root);
-            break;
-        default:
-            break;
+        system("clear");
+        switch(charkey)
+        {
+            case 'd':
+                loadData(&first);
+                if(insertElement(root,&first))
+                {
+                    error = 1;
+                    printf("blad");
+                }
+                 break;
+            case 'w':
+                writeTree(root);
+                getchar();
+                fflush(stdin);
+                break;
+        
+            default:
+                break;
+        }
     }
-    
-      /*loadData(&first);
+    /*  loadData(&first);
       if(insertElement(root,&first))
       {
           error = 1;
@@ -60,9 +67,10 @@ int main(int argc, char** argv) {
           
       }
       writeTree(root);
+      */
       delAll(root);
-    printf("super");
-    getchar();*/
+    printf("super\n");
+    getchar();
     return error;
 }
 
