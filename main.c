@@ -54,21 +54,7 @@ int main(int argc, char** argv) {
                 break;
         }
     }
-    /*  loadData(&first);
-      if(insertElement(root,&first))
-      {
-          error = 1;
-          
-      }
-    
-      if(insertElement(root,&first))
-      {
-          error = 1;
-          
-      }
-      writeTree(root);
-      */
-      delAll(root);
+    delAll(root);
     printf("super\n");
     getchar();
     return error;
