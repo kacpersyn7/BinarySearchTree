@@ -21,7 +21,7 @@
  */
 
 int main(int argc, char** argv) {
-    int i, error = 0;
+    int i, error = 0, number;
     char charkey;
     char searchname[20];
     data_t first;
@@ -69,6 +69,18 @@ int main(int argc, char** argv) {
                 minRecord(root);
                 getchar();
                 fflush(stdin);
+            case 'h' :
+                number = treeHeight(root);
+                printf("\n%d\n");
+                getchar();
+                fflush(stdin);
+                break;
+            case 'n' :
+                number = Nodes(root);
+                printf("\n%d\n");
+                getchar();
+                fflush(stdin);
+                break;
             default:
                 break;
         }
@@ -77,5 +89,6 @@ int main(int argc, char** argv) {
     printf("super\n");
     getchar();
     return error;
+    
 }
 

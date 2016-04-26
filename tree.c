@@ -100,10 +100,10 @@ void minRecord(node_t *root)
 int treeHeight(node_t *tree)
 {
 	int hl, hr;
-	if ( drzewo != NULL )
+	if (tree != NULL )
 	{
-		hl = wysdrzew(drzewo->l_syn);
-		hr = wysdrzew(drzewo->p_syn);
+		hl = treeHeight(tree->left);
+		hr = treeHeight(tree->right);
 		return(1 + (hl > hr ? hl : hr));
 	}
 	else

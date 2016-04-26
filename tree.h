@@ -37,6 +37,8 @@ void writeTree(node_t *);
 node_t *searchKey(node_t *,char *);
 void maxRecord(node_t *);
 void minRecord(node_t *);
+int treeHeight(node_t *);
+int Nodes(node_t *);
 #ifdef __cplusplus
 }
 #endif
