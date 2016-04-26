@@ -23,8 +23,10 @@
 int main(int argc, char** argv) {
     int i, error = 0;
     char charkey;
+    char searchname[20];
     data_t first;
     node_t *root=NULL;
+    node_t *search;
     root = (node_t*)malloc(sizeof(node_t));
     printf("Podaj dane korzenia \n");
     loadData(&first);
@@ -49,7 +51,16 @@ int main(int argc, char** argv) {
                 getchar();
                 fflush(stdin);
                 break;
-        
+            case 's':
+                printf("Podaj szukane nazwisko\n");
+                scanf("%s",searchname);
+                search = searchKey(root, searchname);
+                if(search)
+                    writeElement(&(search->book));
+                getchar();
+                fflush(stdin);
+                break;
+
             default:
                 break;
         }

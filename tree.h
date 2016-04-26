@@ -34,7 +34,7 @@ void loadData(data_t *);
 void writeElement(data_t *);
 void delAll(node_t *);
 void writeTree(node_t *);
-
+node_t *searchKey(node_t *,char *);
 #ifdef __cplusplus
 }
 #endif

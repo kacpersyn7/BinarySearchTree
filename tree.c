@@ -2,6 +2,11 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * wyszukiwanie wartości minimalnej  klucza w drzewie – zrealizowane rekurencyjnie
+ * wyszukiwanie wartości maksymalnej klucza w drzewie
+ * zliczanie wezlow w drzewie
+ * wyszukiwanie okreslonego klucza w drzewie
+ * okreslanie wysokosci drzewa
  */
 #include <string.h>
 #include <stdio.h>
@@ -75,6 +80,13 @@ int insertElement(node_t *root,data_t *newelement)
         }
     }
     return error;
+}
+node_t *searchKey(node_t *root, char *key)
+{
+  node_t *x = root;
+  while((x) && (strcmp(x->book.secondname_id, key)))
+    x = (strcoll(key, x->book.secondname_id)<0) ? x->left : x->right;
+  return x;
 }
 void loadData(data_t *element)
 {
