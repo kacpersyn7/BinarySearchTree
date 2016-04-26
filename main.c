@@ -60,7 +60,15 @@ int main(int argc, char** argv) {
                 getchar();
                 fflush(stdin);
                 break;
-
+            case 'x':
+                maxRecord(root);
+                getchar();
+                fflush(stdin);
+                break;
+            case 'm':
+                minRecord(root);
+                getchar();
+                fflush(stdin);
             default:
                 break;
         }

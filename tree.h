@@ -35,6 +35,8 @@ void writeElement(data_t *);
 void delAll(node_t *);
 void writeTree(node_t *);
 node_t *searchKey(node_t *,char *);
+void maxRecord(node_t *);
+void minRecord(node_t *);
 #ifdef __cplusplus
 }
 #endif

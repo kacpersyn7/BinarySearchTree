@@ -88,6 +88,21 @@ node_t *searchKey(node_t *root, char *key)
     x = (strcoll(key, x->book.secondname_id)<0) ? x->left : x->right;
   return x;
 }
+void minRecord(node_t *root)
+{
+   if (root)
+   { maxRecord(root->left);
+   if (root->left == NULL)
+      writeElement(&(root->book));}
+}
+
+void maxRecord(node_t *root)
+{
+   if (root)
+   {  maxRecord(root->right);
+   if (root->right == NULL)
+      writeElement(&(root->book));}
+}
 void loadData(data_t *element)
 {
     printf("\nPodaj imie\n");
