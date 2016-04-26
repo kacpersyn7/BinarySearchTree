@@ -41,8 +41,8 @@ int insertElement(node_t *root,data_t *newelement)
                 {
                     temp->left->left = NULL;
                     temp->left->right = NULL;
-                    checkadd = 0;
                     temp->left->book = *newelement;
+                    checkadd = 0;
                 }
                 else 
                 {
@@ -64,8 +64,8 @@ int insertElement(node_t *root,data_t *newelement)
                 {
                     temp->right->left = NULL;
                     temp->right->right = NULL;
-                    checkadd = 0;
                     temp->right->book = *newelement;
+                    checkadd = 0;
                 }
                 else 
                 {
@@ -91,18 +91,28 @@ node_t *searchKey(node_t *root, char *key)
 void minRecord(node_t *root)
 {
    if (root)
-   { maxRecord(root->left);
-   if (root->left == NULL)
-      writeElement(&(root->book));}
+   { 
+       maxRecord(root->left);
+       if (root->left == NULL)
+            writeElement(&(root->book));
+   }
 }
-
 void maxRecord(node_t *root)
 {
    if (root)
-   {  maxRecord(root->right);
-   if (root->right == NULL)
-      writeElement(&(root->book));}
+   {  
+       maxRecord(root->right);
+       if (root->right == NULL)
+            writeElement(&(root->book));
+   }
 }
+int Nodes(node_t *root)
+{
+    if(!root) return 0;
+    if(root->left == NULL && root->right == NULL) return 1;
+    return(1+Nodes(root->left)+Nodes(root->right));
+}
+
 void loadData(data_t *element)
 {
     printf("\nPodaj imie\n");
