@@ -71,13 +71,13 @@ int main(int argc, char** argv) {
                 fflush(stdin);
             case 'h' :
                 number = treeHeight(root);
-                printf("\n%d\n");
+                printf("\n%d\n",number);
                 getchar();
                 fflush(stdin);
                 break;
             case 'n' :
                 number = Nodes(root);
-                printf("\n%d\n");
+                printf("\n%d\n",number);
                 getchar();
                 fflush(stdin);
                 break;
