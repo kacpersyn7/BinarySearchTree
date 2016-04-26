@@ -97,6 +97,18 @@ void minRecord(node_t *root)
             writeElement(&(root->book));
    }
 }
+int treeHeight(node_t *tree)
+{
+	int hl, hr;
+	if ( drzewo != NULL )
+	{
+		hl = wysdrzew(drzewo->l_syn);
+		hr = wysdrzew(drzewo->p_syn);
+		return(1 + (hl > hr ? hl : hr));
+	}
+	else
+		return(0);
+}
 void maxRecord(node_t *root)
 {
    if (root)
