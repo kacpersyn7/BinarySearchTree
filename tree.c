@@ -152,3 +152,9 @@ void writeTree(node_t *root)
         writeTree(root->right);
     }
 }
+void show(void)
+{
+    printf("1.Dodaj element - d\n2.Wyszukaj element (po nazwisku) - s\n3.podaj wysokosc - h\n");
+    printf("4.Podaj ostatni element - x\n5.Podaj pierwszy element\n6.Wypisz baze - w\n7.Podaj ilosc wezlow - n\n");
+    printf("8.Zakoncz - z\n");
+}

@@ -35,7 +35,9 @@ int main(int argc, char** argv) {
     root->right = NULL;
     while((charkey = getchar()) != 'z' && error != 1)
     {
-        system("clear");
+       
+        system("clear"); 
+        show();
         switch(charkey)
         {
             case 'd':

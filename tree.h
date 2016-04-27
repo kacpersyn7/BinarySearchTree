@@ -39,6 +39,7 @@ void maxRecord(node_t *);
 void minRecord(node_t *);
 int treeHeight(node_t *);
 int Nodes(node_t *);
+void show();
 #ifdef __cplusplus
 }
 #endif
