@@ -32,7 +32,7 @@ int insertElement(node_t *root,data_t *newelement)
     while(checkadd)
     {
         
-        if(strcoll((temp->book).secondname_id,newelement->secondname_id)>=0)
+        if(strcoll((temp->book).secondname_id,newelement->secondname_id)>0)
         {
             if(temp->left == NULL)
             {
@@ -155,6 +155,6 @@ void writeTree(node_t *root)
 void show(void)
 {
     printf("1.Dodaj element - d\n2.Wyszukaj element (po nazwisku) - s\n3.podaj wysokosc - h\n");
-    printf("4.Podaj ostatni element - x\n5.Podaj pierwszy element\n6.Wypisz baze - w\n7.Podaj ilosc wezlow - n\n");
+    printf("4.Podaj ostatni element - x\n5.Podaj pierwszy element - m\n6.Wypisz baze - w\n7.Podaj ilosc wezlow - n\n");
     printf("8.Zakoncz - z\n");
 }
